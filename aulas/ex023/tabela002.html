@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        caption {
+            padding: 10px;
+            font-size: 1.5em;
+            font-weight: bold;
+            background-color: lightgray;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        tr.cabecalho > th {
+            padding: 18px;
+            background-color: grey;
+            color: white;
+            position: sticky;
+            top: -1px;
+            background-color: grey;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            vertical-align: center;
+        }
+
+        td.estado, td.pais {
+            text-align: left;
+        }
+        
+        td.num {
+            text-align: right;
+        }
+
+        img {
+            width: 23px;
+            height: 15px;
+        }
+
+        tfoot {
+            background-color: grey;
+            color: white;
+        }
+
+        tbody > tr:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+    ANATOMIA PARA TABELAS GRANDES
+    TABLE
+        CAPTION
+        THEAD
+            TR, TD, TH
+        TBODY
+            TR, TD, TH
+        TFOOT
+            TR, TD, TH
+    -->
+    <table>
+        <caption>Populaçao das Unidades Federativas</caption>
+        <thead>
+            <tr class="cabecalho">
+                <th scope="col">Posição</th>
+                <th scope="col">Unidade federativa</th>
+                <th scope="col">População</th>
+                <th scope="col">% de População total</th>
+                <th scope="col">País comparavel</h>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td class="estado"><img src="imagens/sp.png" alt="Bandeira estado de São Paulo"> São Paulo</td>
+                <td class="num">46.081.801</td>
+                <td>21,59%</td>
+                <td class="pais"><img src="imagens/arg.png" alt="Bandeira da Argentina">Argentina</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="estado"><img src="imagens/minas.png" alt="Bandeira estado de Minas Gerais"> Minas Gerais</td>
+                <td class="num">21.393.441</td>
+                <td>10,2%</td>
+                <td class="pais"><img src="imagens/chade.png" alt="Bandeira de Chade">Chade</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="estado"><img src="imagens/rj.png" alt="Bandeira estado do Rio de Janeiro"> Rio de Janeiro</td>
+                <td class="num">17.223.547</td>
+                <td>8,07%</td>
+                <td class="pais"><img src="imagens/zimbabwe.png" alt="Bandeira de Zimbabwe">Zimbabwe</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="estado"><img src="imagens/bahia.png" alt="Bandeira estado da Bahia"> Bahia</td>
+                <td class="num">14.870.907</td>
+                <td>6,97%</td>
+                <td class="pais"><img src="imagens/benim.png" alt="Bandeira de Benim">Benim</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td class="estado"><img src="imagens/pr.png" alt="Bandeira estado do Paraná"> Paraná</td>
+                <td class="num">11.890.517</td>
+                <td>5,57%</td>
+                <td class="pais"><img src="imagens/haiti.png" alt="Bandeira do Haiti">Haiti</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total</th>
+                <td></td>
+                <td scope="row" class="num"><strong>111.460.213</strong></td>
+                <td scope="row"><strong>52,4%</strong></td>
+                <td scope="row"></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
