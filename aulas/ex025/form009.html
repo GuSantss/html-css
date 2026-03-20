@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form009</title>
+</head>
+<body>
+    <h1>Exemplo de Formulários</h1>
+    <form action="cadastro.php" method="post">
+        <p>
+            <label for="inumero">Numero:
+                <input type="range" name="numero" id="inumero" min="0" max="10" oninput="ival.innerHTML = Number(inumero.value)">
+                <output id="ival">5</output>
+            </label>
+        </p>
+
+        <p>
+            <input type="submit" value="Entrar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form005</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        fieldset.sexo {
+            border: 2px solid black;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        fieldset.sexo label {
+            cursor: pointer;
+        }
+
+        fieldset.esporte {
+            border: 2px solid black;
+            border-radius: 15px;
+        }
+
+        fieldset.esporte label {
+            cursor: pointer;
+        }
+
+        .botoes input {
+            width: 100px;
+            padding: 6px;
+            font-size: 13px;
+            border-radius: 4px;
+            border: 1px solid black;
+            background-color: grey;
+            color: white;
+            font-weight: bolder;
+            transition: 0.5s;
+        }
+
+        .botoes input:hover {
+            background-color: rgb(83, 83, 83);
+            transition: 0.5s;
+            transform: translateY(-1px);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get">
+        <fieldset class="sexo">
+            <legend>Sexo</legend>
+            <label for="isexom">
+                <input type="radio" name="sexo" id="isexom">Maculino <br>
+            </label>
+            <label for="isexof">
+                <input type="radio" name="sexo" id="isexof">Feminino
+            </label>
+
+        </fieldset>
+        <fieldset class="esporte">
+
+            <legend>Esportes Favoritos</legend>
+            <label for="iesportef">
+                <input type="checkbox" name="esportef" id="iesportef">Futebol <br>
+            </label>
+            <label for="iesporteb">
+                <input type="checkbox" name="esporteb" id="iesporteb">Basquete<br>
+            </label>
+            <label for="iesporten">
+                <input type="checkbox" name="esporten" id="iesporten">Natação <br>
+            </label>
+            <label for="iesportet">
+                <input type="checkbox" name="esportet" id="iesportet">Tênis <br>
+            </label>
+        </fieldset>
+
+        <p class="botoes">
+            <input type="submit" value="Entrar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
